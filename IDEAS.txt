@@ -1,0 +1,15 @@
+﻿Paola - Could we please somehow incorporate the layout of this page on ours?
+
+
+https://www.makeuseof.com/tag/7-cool-html-effects-that-anyone-can-add-to-their-website-nb/
+
+
+Could we have the scrolly red thing at the top also in our website?
+
+
+https://html.com/tables/
+
+
+
+
+Gabe - We need to find a way to have a block of text in the format of a paragraph rather than a continuous line of text.
