@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Index Panther Coders</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+$(function() {
+
+    var $sidebar   = $("#mySidenav"), 
+        $window    = $(window),
+        offset     = $sidebar.offset(),
+        topPadding = 15;
+
+    $window.scroll(function() {
+        if ($window.scrollTop() > offset.top) {
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+        } else {
+            $sidebar.stop().animate({
+                marginTop: 0
+            });
+        }
+    });
+    
+});
+</script>
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul class="hello">
+     <li><a href="index.html">Home Page</a></li>
+    
+    <li><a href="page2.html">Food Bank of Delaware</a></li>
+
+    <li><a href="page3.html">SPCA</a></li>
+
+    <li><a href="page4.html">Blood Bank of Delaware</a></li>
+
+    <li><a href="page5.html">Locks of Love</a></li>
+
+    <li><a href="page6.html">One Laptop Per Child</a></li>
+    
+    <li><a href="page7.html">The Outreach Program for Soccer</a></li>
+
+    <li><a href="AboutUs.html">About Us</a></li>
+    </ul>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+ <center>
+  <h1><b>The PSD Panther Coders Club</b></h1>
+
+  <h2><i>Welcome to PSD Service Hub!</i></h2>
+
+<div class="w3-content w3-section">
+  <img class="mySlides" src="https://castellanicreative.files.wordpress.com/2013/12/food-bank-logo.jpg" alt="food bank" style="width:300px;height:250px">
+  <img class="mySlides" src="https://s3.amazonaws.com/petfinder-us-east-1-petimages-prod/organization-photos/36539/36539-1.jpg?bust=2017-11-29+22%3A50%3A28" alt="SPCA" style="width:300px;height:250px">
+  <img class="mySlides" src="https://www.asapr.com/wp-content/uploads/2014/12/BBD.jpg" alt="Blood Bank of DE" style="width:300px;height:250px">
+  <img class="mySlides" src="http://www.thepursuitofgreen.com/wp-content/uploads/2013/06/LocksofLove.jpg" alt="LockofLove" style="width:300px;height:250px">
+  <img class="mySlides" src="http://oneday.wpengine.netdna-cdn.com/wp-content/uploads/one-laptop-per-child-logo.gif" alt="Onelaptopperchild" style="width:300px;height:250px">
+  <img class="mySlides" src="https://lexysa.demosphere-secure.com/_files/TOPSoccer%20logo.JPG" alt="TOPSoccer" style="width:300px;height:250px">
+</div>
+</center> 
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>  
+  
+  <p>Our mission, with this website, is to help out and serve local communities in any way possible. As kids, there is not much we can do on our own to support our communities. This website will allow us to make a heartfelt contribution to our communities
+    as much as we can. Some specific organizations that we have decided to work with are:</p>
+
+  
+  <ul><b>Food Bank of Delaware:</b><br>The Food Bank of Delaware is a non-profit agency with a vision to rid local communities from the struggles of hunger. For more information, see <a href="page2.html">this page.</a></ul>
+
+  <ul><b>Society for the Prevention of Cruelty to Animals(SPCA):</b><br>The Pennsylvania Society for the Prevention of Cruelty to Animals, is a non-profit orgization. Their mission is to fight againts animal cruelty. For more Information, see <a href="page4.html">this page.</a></ul>
+  <ul><b>Blood Bank of Delaware/Pennsylvania:</b><br>The Blood Banks of Delaware and Pennsylvania is a community based blood program, committed to providing a quality blood supply, responsive to community needs, in a cost effective manner. For more information,
+    see <a href="page5.html">this page.</a></ul>
+  <ul><b>Locks of Love:</b><br>Locks of Love is an organization committed to returning self-confidence for children suffering from hair loss. Donations of hair are given to provide high quality hair prosthetics. For more information, see <a href="page6.html">this page.</a></ul>
+  <ul><b>One Laptop per Child:</b><br>One Laptop per Child's mission is to empower poor children threough education and use of technology. For more information, see <a href="page7.html">this page.</a></ul>
+  <ul><b>TOPSoccer(US Youth Soccer):</b><br>TOPSoccer is a community based training and team placement program for young athletes with disabilities. For more information, see <a href="page8.html">this page.</a></ul>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Page 2 Panther Coders</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+$(function() {
+
+    var $sidebar   = $("#mySidenav"), 
+        $window    = $(window),
+        offset     = $sidebar.offset(),
+        topPadding = 15;
+
+    $window.scroll(function() {
+        if ($window.scrollTop() > offset.top) {
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+        } else {
+            $sidebar.stop().animate({
+                marginTop: 0
+            });
+        }
+    });
+    
+});
+</script>
+</head>
+<body>
+  <nav>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul class="hello">
+   <li><a href="index.html">Home Page</a></li>
+    
+    <li><a href="page2.html">Food Bank of Delaware</a></li>
+
+    <li><a href="page3.html">SPCA</a></li>
+
+    <li><a href="page4.html">Blood Bank of Delaware</a></li>
+
+    <li><a href="page5.html">Locks of Love</a></li>
+
+    <li><a href="page6.html">One Laptop Per Child</a></li>
+    
+    <li><a href="page7.html">The Outreach Program for Soccer</a></li>
+
+    <li><a href="AboutUs.html">About Us</a></li>
+    </ul>
+    </div>
+  </nav>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+  <div class="column1">
+    <div class="h1L">Food Bank of Delaware</div>
+    <center><a href="https://www.fbd.org/"><img src="https://castellanicreative.files.wordpress.com/2013/12/food-bank-logo.jpg" alt="delaware food bank" style="width:250px"></a></center>
+    <h3>What is the Food Bank of Delaware?</h3>
+    <p>The Food Bank of Delaware is an organization that helps people who don't know when their next meal is at to have a meal</p>
+    <h3>What do they hope to achieve?</h3>
+    <p>The Food Bank of Delaware wants everyone to know where their next meal is and to stop hunger in the state of Delaware</p>
+  </div>
+
+  <div class="column2">
+    <div class="h1R">Central Pennsylvania Food Bank</div>
+  </div>
+
+</body>
+
+</html>
